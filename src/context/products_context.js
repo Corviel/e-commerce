@@ -38,10 +38,9 @@ export const ProductsProvider = ({ children }) => {
 
   const fetchProducts = async (url) => {
     dispatch({ type: GET_PRODUCTS_BEGIN })
-
     try {
-      const res = await axios.get(url)
-      const products = res.data
+      const response = await axios.get(url)
+      const products = response.data
       dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products })
     } catch (error) {
       dispatch({ type: GET_PRODUCTS_ERROR })
@@ -50,10 +49,9 @@ export const ProductsProvider = ({ children }) => {
 
   const fetchSingleProduct = async (url) => {
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN })
-
     try {
-      const res = await axios.get(url)
-      const singleProduct = res.data
+      const response = await axios.get(url)
+      const singleProduct = response.data
       dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: singleProduct })
     } catch (error) {
       dispatch({ type: GET_SINGLE_PRODUCT_ERROR })

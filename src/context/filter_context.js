@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useReducer } from "react"
 import {
+  CLEAR_FILTERS,
   FILTER_PRODUCTS,
   LOAD_PRODUCTS,
   SET_GRIDVIEW,
@@ -46,17 +47,14 @@ export const FilterProvider = ({ children }) => {
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW })
   }
-
   const setListView = () => {
     dispatch({ type: SET_LISTVIEW })
   }
-
   const updateSort = (e) => {
     const name = e.target.name // it's technically not needed here, but if i had multiple selects it would be
     const value = e.target.value
     dispatch({ type: UPDATE_SORT, payload: { name, value } })
   }
-
   const updateFilters = (e) => {
     let name = e.target.name
     let value = e.target.value
@@ -66,11 +64,17 @@ export const FilterProvider = ({ children }) => {
     if (name === "color") {
       value = e.target.dataset.color
     }
+    if (name === "price") {
+      value = Number(value)
+    }
+    if (name === "shipping") {
+      value = e.target.checked
+    }
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } })
   }
-
-  const clearFilters = (e) => {}
-
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS })
+  }
   return (
     <FilterContext.Provider
       value={{
