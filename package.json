@@ -1,6 +1,7 @@
 {
   "name": "comfy",
   "version": "0.1.0",
+  "homepage": "https://corviel.github.io/e-commerce",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.12.0",
@@ -22,8 +23,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "CI= react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "netlify dev"
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "netlify-cli": "^12.1.0"
   }
 }
