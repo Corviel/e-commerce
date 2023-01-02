@@ -8,20 +8,23 @@ const Services = () => {
       <div className="section-center">
         <article className="header">
           <h3>
-            Custom furniture <br /> built only for you
+            custom furniture <br />
+            built only for you
           </h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, in
-            ipsa! Vitae aperiam ipsa doloremque cum consequuntur amet expedita
-            incidunt?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            quisquam saepe id reiciendis sunt, repudiandae libero amet rem quia
+            quod?
           </p>
         </article>
         <div className="services-center">
-          {services.map(({ id, icon, title, text }) => {
+          {services.map((service) => {
+            const { id, icon, title, text } = service
             return (
               <article key={id} className="service">
                 <span className="icon">{icon}</span>
                 <h4>{title}</h4>
+                <p>{text}</p>
               </article>
             )
           })}

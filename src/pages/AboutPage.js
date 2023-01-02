@@ -6,22 +6,22 @@ import { PageHero } from "../components"
 const AboutPage = () => {
   return (
     <main>
-      <PageHero title="About" />
+      <PageHero title="about" />
       <Wrapper className="page section section-center">
-        <img src={aboutImg} alt="Nice desk" />
+        <img src={aboutImg} alt="nice desk" />
         <article>
           <div className="title">
-            <h2>Our Story</h2>
+            <h2>Our story</h2>
             <div className="underline"></div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit qui
-              nostrum laborum, quae aliquam delectus, assumenda ullam asperiores
-              eveniet fuga reiciendis, accusamus sapiente dolore. Sint repellat
-              non, aut dignissimos rerum esse doloribus enim quibusdam
-              repellendus voluptas quis dicta quos delectus sunt ullam, nemo
-              voluptates dolorem neque veniam? Sequi, debitis aliquam.
-            </p>
           </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+            quaerat, modi doloremque necessitatibus eum dolor nesciunt delectus,
+            voluptate blanditiis, obcaecati beatae ab aut ipsa consequuntur
+            tempora cumque. Ut quo enim vero odio minus nostrum eveniet,
+            doloribus veritatis dolorem unde ipsum, voluptatibus totam.
+            Explicabo, quas libero! Laborum incidunt minima consequatur ratione?
+          </p>
         </article>
       </Wrapper>
     </main>
