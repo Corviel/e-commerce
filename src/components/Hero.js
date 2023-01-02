@@ -16,7 +16,7 @@ const Hero = () => {
           beatae accusamus minima debitis sint asperiores libero, pariatur
           tempora est?
         </p>
-        <Link to="/products" className="btn hero-btn">
+        <Link to="#/products" className="btn hero-btn">
           Shop now
         </Link>
       </article>

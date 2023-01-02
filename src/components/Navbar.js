@@ -15,7 +15,7 @@ const Nav = () => {
     <NavContainer>
       <div className="nav-center">
         <div className="nav-header">
-          <Link to="/">
+          <Link to="#/">
             <img src={logo} alt="comfy sloth" />
           </Link>
           <button type="button" className="nav-toggle" onClick={openSidebar}>
@@ -33,7 +33,7 @@ const Nav = () => {
           })}
           {myUser && (
             <li>
-              <Link to="/checkout">Checkout</Link>
+              <Link to="#/checkout">Checkout</Link>
             </li>
           )}
         </ul>
